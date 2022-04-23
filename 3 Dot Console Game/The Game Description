@@ -1,1 +1,2 @@
 This is a console game. And, the first player to place 3 consecutive dots in any direction wins.
+The only rule is every dot has to have an adjacent dot.
