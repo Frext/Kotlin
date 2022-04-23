@@ -278,11 +278,11 @@ class DotGame {
                     != GameSymbols.EMPTY_CHAR -> true    // Left
 
 
-            (gameFieldList.getOrNull(verticalIndex - 1)?.getOrNull(horizontalIndex + 1)
+            (gameFieldList.getOrNull(verticalIndex - 1)?.getOrNull(horizontalIndex)
                 ?: GameSymbols.EMPTY_CHAR)
                     != GameSymbols.EMPTY_CHAR -> true // Up
 
-            (gameFieldList.getOrNull(verticalIndex + 1)?.getOrNull(horizontalIndex + 1)
+            (gameFieldList.getOrNull(verticalIndex + 1)?.getOrNull(horizontalIndex)
                 ?: GameSymbols.EMPTY_CHAR)
                     != GameSymbols.EMPTY_CHAR -> true // Down
 
