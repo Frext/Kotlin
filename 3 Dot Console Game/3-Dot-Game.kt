@@ -55,7 +55,7 @@ class DotGame {
 
     private val gameFieldList =
         Array(GameFieldProperties.gameFieldWidth) { Array(GameFieldProperties.gameFieldLength) { GameSymbols.EMPTY_CHAR } }
-    private var gameStarted = false
+    private var isGameStarted = false
 
     private var currentPlayerTurn = PlayerProperties.PLAYER_TURN_START_NUMBER
     private val currentPlayerTurnChar: Char
@@ -165,7 +165,7 @@ class DotGame {
     }
 
     fun placeDotAt(verticalIndex: Int, horizontalIndex: Int): Int {
-        if (gameStarted) {
+        if (isGameStarted) {
             if (gameFieldList[verticalIndex][horizontalIndex] == GameSymbols.EMPTY_CHAR) {
                 if (isThereAnyAdjacentDotAt(verticalIndex, horizontalIndex)) {
                     gameFieldList[verticalIndex][horizontalIndex] = currentPlayerTurnChar
@@ -180,7 +180,7 @@ class DotGame {
         {
             gameFieldList[verticalIndex][horizontalIndex] = currentPlayerTurnChar
 
-            gameStarted = true
+            isGameStarted = true
         }
 
         return PlacingDotResults.SUCCESS
