@@ -392,8 +392,6 @@ class DotGame {
 fun main() {
     val myDotGame = DotGame()
 
-    myDotGame.printGameEndResult(DotGame.GameEndResults.CURRENT_PLAYER_WIN)
-
     myDotGame.printWelcomeScreenForSeconds()
     myDotGame.clearConsole() // This is used to clear the welcome screen
 
